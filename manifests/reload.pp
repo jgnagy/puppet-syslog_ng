@@ -1,5 +1,6 @@
 class syslog_ng::reload (
-  $syntax_check_before_reloads = true
+  $syntax_check_before_reloads = true,
+  $tmp_config_file = '/tmp/syslog-ng.conf.tmp'
 ) {
 
   include syslog_ng::params
