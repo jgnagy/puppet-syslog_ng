@@ -8,7 +8,7 @@ class syslog_ng::reload (
   $config_file     = $::syslog_ng::config_file
   $exec_path = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:'
 
-  $syslog_ng_ctl_full_path = "${::syslog_ng::sbin_path}/syslog-ng-ctl"
+  $syslog_ng_ctl_full_path = "${::syslog_ng::sbin_path}/service syslog-ng"
   $syslog_ng_full_path = "${::syslog_ng::sbin_path}/syslog-ng"
 
   $syslog_ng_syntax_check_cmd = "${syslog_ng_full_path} --syntax-only --cfgfile %"
